@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Open Recruitment MPK MAN Bandung Barat</title>
+    
+    <link rel="stylesheet" href="background.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+</head>
+<body class="p-4 md:p-10 text-white">
+
+    <div class="max-w-3xl mx-auto" id="main-container">
+        
+        <!-- HEADER / LOGO -->
+        <header class="text-center mb-10 pt-4">
+            <div class="flex justify-center items-center space-x-6 mb-6">
+                <div class="w-20 h-20 md:w-24 md:h-24 flex items-center justify-center drop-shadow-[0_0_15px_rgba(255,255,255,0.2)]">
+                    <img src="MAN.png" alt="Logo MAN BB" class="w-full h-full object-contain" onerror="this.src='https://via.placeholder.com/100?text=MAN+BB'">
+                </div>
+                <div class="w-20 h-20 md:w-24 md:h-24 flex items-center justify-center drop-shadow-[0_0_20px_rgba(185,28,28,0.4)]">
+                    <img src="MPK.png" alt="Logo MPK" class="w-full h-full object-contain" onerror="this.src='https://via.placeholder.com/100?text=MPK'">
+                </div>
+            </div>
+            <span class="px-3 py-1 text-xs font-bold tracking-widest text-red-400 bg-red-950/60 border border-red-800 rounded-full uppercase">
+                Portal Resmi Oprec
+            </span>
+            <h1 class="text-3xl md:text-5xl font-extrabold mt-3 uppercase tracking-tight bg-gradient-to-r from-white via-zinc-200 to-red-600 bg-clip-text text-transparent">
+                MPK MAN Bandung Barat
+            </h1>
+            <p class="text-zinc-400 text-sm md:text-base mt-2 max-w-lg mx-auto">
+                Persiapkan dirimu untuk menjadi bagian dari Majelis Perwakilan Kelas. Pelajari SOP, materi, dan persyaratan sebelum pendaftaran dibuka.
+            </p>
+        </header>
+
+        <!-- MENU UTAMA / DASHBOARD CARD -->
+        <div id="main-menu" class="space-y-4">
+            
+            <!-- CARD 1: SOP & DOKUMEN -->
+            <button onclick="switchTab('section-dokumen')" class="w-full glass p-5 rounded-2xl flex items-center justify-between hover:bg-white/5 transition text-left group">
+                <div class="flex items-center gap-4">
+                    <div class="bg-red-600/20 p-3.5 rounded-xl group-hover:scale-110 transition-transform">
+                        <i data-lucide="file-check-2" class="text-red-500 w-6 h-6"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-base md:text-lg text-white">Persyaratan Dokumen & Alat</h3>
+                        <p class="text-xs md:text-sm text-zinc-400">Berkas administrasi & perangkat pendukung yang wajib disiapkan.</p>
+                    </div>
+                </div>
+                <i data-lucide="chevron-right" class="text-zinc-500 group-hover:translate-x-1 transition-transform"></i>
+            </button>
+
+            <!-- CARD 2: PERSIAPAN DIRI & MATERI -->
+            <button onclick="switchTab('section-materi')" class="w-full glass p-5 rounded-2xl flex items-center justify-between hover:bg-white/5 transition text-left group">
+                <div class="flex items-center gap-4">
+                    <div class="bg-red-600/20 p-3.5 rounded-xl group-hover:scale-110 transition-transform">
+                        <i data-lucide="book-open-check" class="text-red-500 w-6 h-6"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-base md:text-lg text-white">Materi & Pelatihan Diri</h3>
+                        <p class="text-xs md:text-sm text-zinc-400">Silabus wawasan kebangsaan, organisasi, & public speaking.</p>
+                    </div>
+                </div>
+                <i data-lucide="chevron-right" class="text-zinc-500 group-hover:translate-x-1 transition-transform"></i>
+            </button>
+
+            <!-- CARD 3: KRITERIA PENILAIAN -->
+            <button onclick="switchTab('section-penilaian')" class="w-full glass p-5 rounded-2xl flex items-center justify-between hover:bg-white/5 transition text-left group">
+                <div class="flex items-center gap-4">
+                    <div class="bg-red-600/20 p-3.5 rounded-xl group-hover:scale-110 transition-transform">
+                        <i data-lucide="award" class="text-red-500 w-6 h-6"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-base md:text-lg text-white">10 Indikator Penilaian</h3>
+                        <p class="text-xs md:text-sm text-zinc-400">Aspek sikap, kepemimpinan, hingga komitmen seleksi.</p>
+                    </div>
+                </div>
+                <i data-lucide="chevron-right" class="text-zinc-500 group-hover:translate-x-1 transition-transform"></i>
+            </button>
+
+            <!-- CARD 4: FORM SIMULASI / REGISTRASI -->
+            <button onclick="switchTab('section-form')" class="w-full glass p-5 rounded-2xl flex items-center justify-between hover:bg-white/5 transition text-left group border border-red-600/40">
+                <div class="flex items-center gap-4">
+                    <div class="bg-red-600 p-3.5 rounded-xl group-hover:scale-110 transition-transform shadow-lg shadow-red-900/40">
+                        <i data-lucide="user-plus" class="text-white w-6 h-6"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-base md:text-lg text-white">Pendaftaran & Simulasi Data</h3>
+                        <p class="text-xs md:text-sm text-zinc-300">Isi formulir pra-pendaftaran peserta calon anggota MPK.</p>
+                    </div>
+                </div>
+                <i data-lucide="chevron-right" class="text-zinc-500 group-hover:translate-x-1 transition-transform"></i>
+            </button>
+
+            <!-- SOSMED & SALURAN INFORMASI -->
+            <div class="pt-8 text-center">
+                <p class="text-xs text-zinc-500 uppercase tracking-widest mb-4">Informasi Resmi Jadwal Seleksi</p>
+                <div class="flex justify-center space-x-6 text-zinc-400">
+                    <a href="https://www.instagram.com/osismpkmanbb" target="_blank" class="hover:text-pink-500 text-2xl transition-all"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=mpkmanbandungbarat@gmail.com" target="_blank" class="hover:text-red-500 text-2xl transition-all"><i class="fa-solid fa-envelope"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <!-- ================= TAB 1: DOKUMEN & PERLENGKAPAN ================= -->
+        <div id="section-dokumen" class="hidden glass p-6 md:p-8 rounded-[2rem]">
+            <button onclick="backToMenu()" class="text-zinc-400 mb-6 flex items-center gap-2 hover:text-white transition-all text-sm">
+                <i data-lucide="arrow-left" class="w-4"></i> Kembali ke Menu
+            </button>
+            <h2 class="text-2xl font-extrabold mb-6 text-red-500">Persiapan Dokumen & Perlengkapan</h2>
+            
+            <div class="space-y-6">
+                <div>
+                    <h3 class="text-xs uppercase tracking-widest text-zinc-400 font-bold mb-3">1. Dokumen Peserta</h3>
+                    <ul class="grid grid-cols-1 md:grid-cols-2 gap-3 text-sm text-zinc-300">
+                        <li class="glass p-3 rounded-xl flex items-center gap-2"><i data-lucide="check-circle-2" class="text-red-500 w-4 h-4 shrink-0"></i> Curriculum Vitae (CV)</li>
+                        <li class="glass p-3 rounded-xl flex items-center gap-2"><i data-lucide="check-circle-2" class="text-red-500 w-4 h-4 shrink-0"></i> Pas Foto Terbaru</li>
+                        <li class="glass p-3 rounded-xl flex items-center gap-2"><i data-lucide="check-circle-2" class="text-red-500 w-4 h-4 shrink-0"></i> Essay Minimal 500 Kata</li>
+                        <li class="glass p-3 rounded-xl flex items-center gap-2"><i data-lucide="check-circle-2" class="text-red-500 w-4 h-4 shrink-0"></i> Surat Izin Orang Tua</li>
+                        <li class="glass p-3 rounded-xl flex items-center gap-2"><i data-lucide="check-circle-2" class="text-red-500 w-4 h-4 shrink-0"></i> Nomor WhatsApp Aktif</li>
+                        <li class="glass p-3 rounded-xl flex items-center gap-2"><i data-lucide="check-circle-2" class="text-red-500 w-4 h-4 shrink-0"></i> Email Google Aktif</li>
+                        <li class="glass p-3 rounded-xl flex items-center gap-2"><i data-lucide="check-circle-2" class="text-red-500 w-4 h-4 shrink-0"></i> Sertifikat / Piagam (Optional)</li>
+                        <li class="glass p-3 rounded-xl flex items-center gap-2"><i data-lucide="check-circle-2" class="text-red-500 w-4 h-4 shrink-0"></i> Fotokopi Rapor Terakhir</li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="text-xs uppercase tracking-widest text-zinc-400 font-bold mb-3">2. Perlengkapan Wajib</h3>
+                    <div class="grid grid-cols-3 gap-3 text-center text-xs">
+                        <div class="glass p-4 rounded-xl">
+                            <i data-lucide="smartphone" class="w-6 h-6 text-red-400 mx-auto mb-2"></i>
+                            Smartphone
+                        </div>
+                        <div class="glass p-4 rounded-xl">
+                            <i data-lucide="mail" class="w-6 h-6 text-red-400 mx-auto mb-2"></i>
+                            Akun Google
+                        </div>
+                        <div class="glass p-4 rounded-xl">
+                            <i data-lucide="hard-drive" class="w-6 h-6 text-red-400 mx-auto mb-2"></i>
+                            Google Drive
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ================= TAB 2: MATERI & PERSIAPAN DIRI ================= -->
+        <div id="section-materi" class="hidden glass p-6 md:p-8 rounded-[2rem]">
+            <button onclick="backToMenu()" class="text-zinc-400 mb-6 flex items-center gap-2 hover:text-white transition-all text-sm">
+                <i data-lucide="arrow-left" class="w-4"></i> Kembali ke Menu
+            </button>
+            <h2 class="text-2xl font-extrabold mb-6 text-red-500">Materi & Persiapan Diri</h2>
+
+            <div class="space-y-6">
+                <div>
+                    <h3 class="text-xs uppercase tracking-widest text-zinc-400 font-bold mb-3">Materi Yang Wajib Dipelajari</h3>
+                    <div class="grid grid-cols-2 md:grid-cols-2 gap-2 text-xs md:text-sm">
+                        <div class="glass p-3 rounded-xl">• Struktur Organisasi MPK</div>
+                        <div class="glass p-3 rounded-xl">• Tugas & Fungsi MPK</div>
+                        <div class="glass p-3 rounded-xl">• Tata Tertib Sekolah</div>
+                        <div class="glass p-3 rounded-xl">• Kepemimpinan & Musyawarah</div>
+                        <div class="glass p-3 rounded-xl">• Etika Organisasi</div>
+                        <div class="glass p-3 rounded-xl">• Wawasan Kebangsaan</div>
+                        <div class="glass p-3 rounded-xl">• Pancasila & Visi Misi Sekolah</div>
+                        <div class="glass p-3 rounded-xl">• Program Kerja MPK</div>
+                    </div>
+                </div>
+
+                <div>
+                    <h3 class="text-xs uppercase tracking-widest text-zinc-400 font-bold mb-3">Latihan Kemampuan Mandiri</h3>
+                    <div class="space-y-2 text-xs md:text-sm text-zinc-300">
+                        <div class="glass p-3 rounded-xl flex items-center gap-2"><i data-lucide="mic" class="text-red-500 w-4 h-4"></i> Melatih kemampuan Public Speaking</div>
+                        <div class="glass p-3 rounded-xl flex items-center gap-2"><i data-lucide="users" class="text-red-500 w-4 h-4"></i> Berlatih berdiskusi dalam kelompok</div>
+                        <div class="glass p-3 rounded-xl flex items-center gap-2"><i data-lucide="brain-circuit" class="text-red-500 w-4 h-4"></i> Membiasakan berpikir kritis & penyelesaian masalah</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ================= TAB 3: INDIKATOR PENILAIAN ================= -->
+        <div id="section-penilaian" class="hidden glass p-6 md:p-8 rounded-[2rem]">
+            <button onclick="backToMenu()" class="text-zinc-400 mb-6 flex items-center gap-2 hover:text-white transition-all text-sm">
+                <i data-lucide="arrow-left" class="w-4"></i> Kembali ke Menu
+            </button>
+            <h2 class="text-2xl font-extrabold mb-2 text-red-500">Kriteria Penilaian Seleksi</h2>
+            <p class="text-xs text-zinc-400 mb-6">10 Poin utama yang dievaluasi oleh panitia penyeleksi MPK MAN Bandung Barat.</p>
+
+            <div class="grid grid-cols-2 md:grid-cols-2 gap-3 text-sm">
+                <div class="glass p-4 rounded-xl font-bold text-center border-l-4 border-red-600">1. Sikap</div>
+                <div class="glass p-4 rounded-xl font-bold text-center border-l-4 border-red-600">2. Disiplin</div>
+                <div class="glass p-4 rounded-xl font-bold text-center border-l-4 border-red-600">3. Komunikasi</div>
+                <div class="glass p-4 rounded-xl font-bold text-center border-l-4 border-red-600">4. Kerja Sama</div>
+                <div class="glass p-4 rounded-xl font-bold text-center border-l-4 border-red-600">5. Kepemimpinan</div>
+                <div class="glass p-4 rounded-xl font-bold text-center border-l-4 border-red-600">6. Integritas</div>
+                <div class="glass p-4 rounded-xl font-bold text-center border-l-4 border-red-600">7. Komitmen</div>
+                <div class="glass p-4 rounded-xl font-bold text-center border-l-4 border-red-600">8. Kreativitas</div>
+                <div class="glass p-4 rounded-xl font-bold text-center border-l-4 border-red-600">9. Berpikir Kritis</div>
+                <div class="glass p-4 rounded-xl font-bold text-center border-l-4 border-red-600">10. Kemauan Belajar</div>
+            </div>
+        </div>
+
+        <!-- ================= TAB 4: FORM REGISTRASI ================= -->
+        <div id="section-form" class="hidden glass p-6 md:p-8 rounded-[2rem]">
+            <button onclick="backToMenu()" class="text-zinc-400 mb-6 flex items-center gap-2 hover:text-white transition-all text-sm">
+                <i data-lucide="arrow-left" class="w-4"></i> Kembali ke Menu
+            </button>
+            <h2 class="text-2xl font-extrabold mb-6 text-red-500">Pendaftaran Calon Peserta</h2>
+
+            <form id="oprec-form" class="space-y-4">
+                <div>
+                    <label class="text-xs uppercase tracking-widest text-zinc-400 font-bold ml-1">Nama Lengkap *</label>
+                    <input type="text" name="Nama" required class="w-full mt-1" placeholder="Masukkan nama lengkap">
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div>
+                        <label class="text-xs uppercase tracking-widest text-zinc-400 font-bold ml-1">Kelas *</label>
+                        <select name="Kelas" required class="w-full mt-1 cursor-pointer">
+                            <option value="" disabled selected>Pilih Kelas</option>
+                            <optgroup label="Kelas 10">
+                                <option>10A</option><option>10B</option><option>10C</option><option>10D</option><option>10E</option><option>10F</option>
+                            </optgroup>
+                            <optgroup label="Kelas 11">
+                                <option>11A</option><option>11B</option><option>11C</option><option>11D</option><option>11E</option><option>11F</option>
+                            </optgroup>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="text-xs uppercase tracking-widest text-zinc-400 font-bold ml-1">Nomor WhatsApp *</label>
+                        <input type="tel" name="Whatsapp" required class="w-full mt-1" placeholder="08xxxxxxxxxx">
+                    </div>
+                </div>
+
+                <div>
+                    <label class="text-xs uppercase tracking-widest text-zinc-400 font-bold ml-1">Link Google Drive Berkas (CV, Essay, Foto) *</label>
+                    <input type="url" name="Drive_URL" required class="w-full mt-1" placeholder="https://drive.google.com/...">
+                </div>
+
+                <div>
+                    <label class="text-xs uppercase tracking-widest text-zinc-400 font-bold ml-1">Motivasi Singkat *</label>
+                    <textarea name="Motivasi" rows="3" required class="w-full mt-1 resize-none" placeholder="Tuliskan alasan singkat ingin bergabung..."></textarea>
+                </div>
+
+                <button type="submit" id="submit-btn" class="w-full btn-mpk font-bold py-4 mt-2">
+                    Kirim Data Pendaftaran
+                </button>
+            </form>
+        </div>
+
+        <footer class="mt-16 text-center text-zinc-600 text-[10px] tracking-widest uppercase">
+            &copy; 2026 MPK MAN Bandung Barat. All Rights Reserved.
+        </footer>
+    </div>
+
+    <!-- MODAL BERHASIL -->
+    <div id="success-modal" class="fixed inset-0 z-[100] hidden flex items-center justify-center p-4">
+        <div class="absolute inset-0 bg-black/80 backdrop-blur-md"></div>
+        <div class="glass border border-white/20 p-8 rounded-[2.5rem] max-w-sm w-full relative z-10 text-center transform transition-all scale-90 opacity-0" id="modal-content">
+            <div class="w-16 h-16 bg-red-600/20 rounded-full flex items-center justify-center mx-auto mb-4 border border-red-500/30">
+                <i data-lucide="check-circle-2" class="text-red-500 w-10 h-10"></i>
+            </div>
+            <h3 class="text-2xl font-bold mb-2">Data Terkirim!</h3>
+            <p class="text-zinc-400 text-xs mb-6">Berkas kamu telah tercatat. Pantau pengumuman resmi di Instagram OSIMMPK MAN Bandung Barat.</p>
+            <button onclick="closeModal()" class="w-full btn-mpk font-bold py-3 text-sm">
+                Selesai
+            </button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
